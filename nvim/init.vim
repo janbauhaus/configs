@@ -21,6 +21,7 @@ Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
 Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
+Plug 'Mofiqul/dracula.nvim'
 
 set encoding=UTF-8
 
@@ -33,10 +34,15 @@ inoremap " ""<Esc>ha
 inoremap ' ''<Esc>ha
 inoremap ` ``<Esc>ha
 
-nnoremap <C-f> :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
+:let mapleader = " "
+
+nnoremap <leader>f :NERDTreeFocus<CR>
+nnoremap <leader>n :NERDTree<CR>
+nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>c :call CocActionAsync('jumpDefinition')<CR>
+
+nnoremap <leader>+ :move +1<CR>
+nnoremap <leader>- :move -1<CR>
 
 nmap <F9> :TagbarToggle<CR>
 
@@ -46,7 +52,7 @@ nmap <F9> :TagbarToggle<CR>
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
 
-:colorscheme jellybeans
+:colorscheme OceanicNext
 
 " --- Just Some Notes ---
 " :PlugClean :PlugInstall :UpdateRemotePlugins
