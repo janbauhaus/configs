@@ -1,0 +1,96 @@
+palette = "dracula"
+
+format = """\
+[](fg:current_line bg:background)\
+[󱓞 ](fg:foreground bg:current_line)\
+[󰿟](fg:foreground bg:current_line)\
+$directory\
+$git_branch\
+$git_status\
+$git_metrics\
+[](fg:current_line bg:background)\
+$fill\
+[](bg:background fg:current_line)\
+$cmd_duration\
+$python\
+$username\
+$hostname\
+[ 󰿟](bg:current_line fg:foreground)\
+$time\
+[](bg:background fg:current_line)
+$character\
+"""
+
+
+# Fill character (empty space) between the left and right prompt
+[fill]
+symbol = " "
+
+[python]
+format = '[( $virtualenv [󰿟](bg:current_line fg:foreground))]($style)'
+style = "fg:green bg:current_line"
+pyenv_version_name = true
+
+[directory]
+format = "[  $path ]($style)"
+style = "fg:cyan bg:current_line"
+
+[hostname]
+format = '[@$hostname]($style)'
+style = "fg:green bg:current_line"
+ssh_only = true
+
+[username]
+format = "[ $user]($style)"
+style_user = "fg:green bg:current_line"
+style_root = "fg:red bg:current_line"
+show_always = true
+
+[git_branch]
+format = '[󰿟](fg:foreground bg:current_line)[ $symbol$branch(:$remote_branch) ]($style)'
+symbol = "  "
+style = "fg:green bg:current_line"
+
+[git_status]
+format = '[$all_status]($style)'
+style = "fg:bright-green bg:current_line"
+
+[git_metrics]
+format = "([+$added]($added_style))[ ]($added_style)"
+added_style = "fg:bright-green bg:current_line"
+deleted_style = "fg:bright-red bg:current_line"
+disabled = false
+
+[hg_branch]
+format = "[ $symbol$branch ]($style)"
+symbol = " "
+
+[cmd_duration]
+format = "[ $duration 󰔟 [󰿟](bg:current_line fg:foreground)]($style)"
+style = "fg:foreground bg:current_line"
+show_milliseconds = true
+min_time = 10
+
+[character]
+success_symbol = '[ ➜](bold green)'
+error_symbol = '[ ✗](bold red)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#1d2230"
+format = '[[ $time 󱑍 ](bg:current_line fg:cyan)]($style)'
+
+# Define Dracula color palette
+[palettes.dracula]
+background = "#000000"
+current_line = "#44475a"
+foreground = "#f8f8f2"
+comment = "#6272a4"
+cyan = "#8be9fd"
+green = "#50fa7b"
+orange = "#ffb86c"
+pink = "#ff79c6"
+purple = "#bd93f9"
+red = "#ff5555"
+yellow = "#f1fa8c"
