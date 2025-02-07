@@ -1,23 +1,21 @@
 palette = "dracula"
 
 format = """\
-[](fg:current_line bg:none)\
-[󱓞 ](fg:foreground bg:current_line)\
+[ 󱓞 ](fg:foreground bg:current_line)\
 [󰿟](fg:foreground bg:current_line)\
 $directory\
 $git_branch\
 $git_status\
 $git_metrics\
-[](fg:current_line bg:none)\
+[](fg:current_line bg:none)\
 $fill\
-[](bg:none fg:current_line)\
+[](bg:none fg:current_line)\
 $cmd_duration\
 $python\
 $username\
 $hostname\
 [ 󰿟](bg:current_line fg:foreground)\
-$time\
-[](bg:none fg:current_line)
+$time
 $character\
 """
 
