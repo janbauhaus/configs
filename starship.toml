@@ -64,7 +64,7 @@ format = "[ $symbol$branch ]($style)"
 symbol = " "
 
 [cmd_duration]
-format = "[ $duration 󰔟 [󰿟](bg:current_line fg:foreground)]($style)"
+format = "[ $duration 󱦟 [󰿟](bg:current_line fg:foreground)]($style)"
 style = "fg:foreground bg:current_line"
 show_milliseconds = true
 min_time = 10
